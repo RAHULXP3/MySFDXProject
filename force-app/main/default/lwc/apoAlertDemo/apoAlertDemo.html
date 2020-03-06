@@ -1,0 +1,43 @@
+<template>
+    <table class="apo-alert-demo-container">
+        <tr>
+            <td class="apo-alert-demo--headers">Component</td>
+            <td class="apo-alert-demo--headers">Standard</td>
+        </tr>
+        <tr>
+            <td class="apo-alert-demo--headers">Alert variant standard</td>
+            <td>
+                <c-apo-alert id="alert-01" alert-content={alertContent} variant="standard">
+                </c-apo-alert>
+            </td>
+        </tr>
+        <tr>
+            <td class="apo-alert-demo--headers">
+                Alert variant standard multiple-actions
+            </td>
+            <td>
+                <c-apo-alert id="alert-02" alert-content={alertContent} variant="standard" multiple-actions>
+                </c-apo-alert>
+            </td>
+        </tr>
+        <tr>
+            <td class="apo-alert-demo--headers">Alert variant success</td>
+            <td>
+                <c-apo-alert id="alert-03" alert-content={alertContent} variant="success">
+                </c-apo-alert>
+            </td>
+        </tr>
+        <tr>
+            <td class="apo-alert-demo--headers">Alert variant warning</td>
+            <td>
+                <c-apo-alert id="alert-04" alert-content={alertContent} variant="warning"></c-apo-alert>
+            </td>
+        </tr>
+        <tr>
+            <td class="apo-alert-demo--headers">Alert variant error</td>
+            <td>
+                <c-apo-alert id="alert-05" alert-content={alertContent} variant="error"></c-apo-alert>
+            </td>
+        </tr>
+    </table>
+</template>

@@ -1,0 +1,28 @@
+<template>
+    <template if:false={state.hide}>
+        <div class={computedAlertMainClass} role="alert" aria-label={ariaLabel} aria-describedby={ariaDescribedBy}
+            aria-controls={ariaControls} aria-expanded={ariaExpanded} aria-live={ariaLive} aria-atomic={ariaAtomic}>
+            <span class="apo-alert__assistive-text">{assistiveText}</span>
+            <div class="apo-alert--centered">
+                <!-- icon -->
+                <div class="apo-alert__icon" aria-hidden="true">
+                    <img src={svgUrl} width="16" height="16" />
+                </div>
+                <p class={textStyle}>{alertContent}</p>
+            </div>
+
+            <!-- close icon -->
+            <template if:false={multipleActions}>
+                <div onclick={destroy} class="apo-alert__close-icon" role="button">
+                    <img onclick={destroy} alt="close" src={closeIcon} width="12" height="12" />
+                </div>
+            </template>
+            <!-- button one -->
+            <template if:true={multipleActions}>
+                <button onclick={routeView} class={buttonStyle} role="button">View</button>
+                <!-- button two -->
+                <button onclick={destroy} class={buttonStyle} role="button">Dismiss</button>
+            </template>
+        </div>
+    </template>
+</template>
